@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF9D3B6A-2832-47E0-850A-7B087AEAA3AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OtherSports_DataPushing</RootNamespace>
+    <AssemblyName>OtherSports_DataPushing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Khelo-India logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SendToSMM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\SendToSMM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Athletics\FrmLineup_Athletic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Athletics\FrmLineup_Athletic.designer.cs">
+      <DependentUpon>FrmLineup_Athletic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Athletics\FrmMatch_Athletic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Athletics\FrmMatch_Athletic.designer.cs">
+      <DependentUpon>FrmMatch_Athletic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Athletics\frmResult_Athletic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Athletics\frmResult_Athletic.Designer.cs">
+      <DependentUpon>frmResult_Athletic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadMinton\FrmBadminton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadMinton\FrmBadminton.designer.cs">
+      <DependentUpon>FrmBadminton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadMinton\FrmLineup_BM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadMinton\FrmLineup_BM.designer.cs">
+      <DependentUpon>FrmLineup_BM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadMinton\FrmMatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadMinton\FrmMatches.designer.cs">
+      <DependentUpon>FrmMatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadMinton\FrmMatches_BM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadMinton\FrmMatches_BM.designer.cs">
+      <DependentUpon>FrmMatches_BM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadMinton\FrmQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadMinton\FrmQC.designer.cs">
+      <DependentUpon>FrmQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadMinton\FrmQClite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadMinton\FrmQClite.designer.cs">
+      <DependentUpon>FrmQClite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasketBall\FrmBasketBall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasketBall\FrmBasketBall.Designer.cs">
+      <DependentUpon>FrmBasketBall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasketBall\FrmLineups_BB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasketBall\FrmLineups_BB.Designer.cs">
+      <DependentUpon>FrmLineups_BB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasketBall\FrmMatches_BB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasketBall\FrmMatches_BB.Designer.cs">
+      <DependentUpon>FrmMatches_BB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonCls.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Athletics\FrmAthletics_Attempts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Athletics\FrmAthletics_Attempts.designer.cs">
+      <DependentUpon>FrmAthletics_Attempts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmtiebreaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmtiebreaker.Designer.cs">
+      <DependentUpon>Frmtiebreaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmArchiveSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmArchiveSync.Designer.cs">
+      <DependentUpon>frmArchiveSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmBroadcast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmBroadcast.Designer.cs">
+      <DependentUpon>frmBroadcast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\FrmfinalSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmfinalSync.Designer.cs">
+      <DependentUpon>FrmfinalSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmOtherCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmOtherCards.designer.cs">
+      <DependentUpon>frmOtherCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmSubstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmSubstitute.Designer.cs">
+      <DependentUpon>frmSubstitute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDBBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDBBackup.designer.cs">
+      <DependentUpon>FrmDBBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmDeleteMatchcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmDeleteMatchcs.designer.cs">
+      <DependentUpon>frmDeleteMatchcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedalEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedalEntry.Designer.cs">
+      <DependentUpon>frmMedalEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedalReadfrmJson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedalReadfrmJson.Designer.cs">
+      <DependentUpon>frmMedalReadfrmJson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\clsXmlRead.cs" />
+    <Compile Include="Kabaddi\FrmAllReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmAllReport.designer.cs">
+      <DependentUpon>FrmAllReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmImportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmImportExport.designer.cs">
+      <DependentUpon>frmImportExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmManoftheMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmManoftheMatch.Designer.cs">
+      <DependentUpon>frmManoftheMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\FrmManualScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmManualScore.Designer.cs">
+      <DependentUpon>FrmManualScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmMatchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmMatchResult.designer.cs">
+      <DependentUpon>frmMatchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmPitchmapRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmPitchmapRegion.Designer.cs">
+      <DependentUpon>frmPitchmapRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmReview.designer.cs">
+      <DependentUpon>frmReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmScorecard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmScorecard.designer.cs">
+      <DependentUpon>frmScorecard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmSync.Designer.cs">
+      <DependentUpon>frmSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\frmTimeout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\frmTimeout.Designer.cs">
+      <DependentUpon>frmTimeout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\FrmValidation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmValidation.designer.cs">
+      <DependentUpon>FrmValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\KabaddiXmlGenerate.cs" />
+    <Compile Include="Kabaddi\KabaddiXmlGenerate_Web.cs" />
+    <Compile Include="Kabaddi\Manual_Capture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\Manual_Capture.Designer.cs">
+      <DependentUpon>Manual_Capture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho Kho\FrmKhoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho Kho\FrmKhoKho.designer.cs">
+      <DependentUpon>FrmKhoKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho Kho\FrmLineup_KK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho Kho\FrmLineup_KK.designer.cs">
+      <DependentUpon>FrmLineup_KK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho Kho\FrmMatches_KK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho Kho\FrmMatches_KK.designer.cs">
+      <DependentUpon>FrmMatches_KK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho Kho\Frmtoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho Kho\Frmtoss.designer.cs">
+      <DependentUpon>Frmtoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmCoachMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmCoachMaster.designer.cs">
+      <DependentUpon>frmCoachMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Volley Ball\FrmLineup_VB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Volley Ball\FrmLineup_VB.designer.cs">
+      <DependentUpon>FrmLineup_VB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Volley Ball\FrmMatches_VB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Volley Ball\FrmMatches_VB.designer.cs">
+      <DependentUpon>FrmMatches_VB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Volley Ball\FrmMatches_Volleyball.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Volley Ball\FrmMatches_Volleyball.designer.cs">
+      <DependentUpon>FrmMatches_Volleyball.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Volley Ball\FrmVolleyBall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Volley Ball\FrmVolleyBall.designer.cs">
+      <DependentUpon>FrmVolleyBall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wrestling\FrmWrestling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wrestling\FrmWrestling.designer.cs">
+      <DependentUpon>FrmWrestling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\FrmKabaddiQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmKabaddiQC.designer.cs">
+      <DependentUpon>FrmKabaddiQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layer\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layer\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layer\MasterINF.cs" />
+    <Compile Include="Layer\PropertiesCl.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SendtoViz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SendtoViz.designer.cs">
+      <DependentUpon>SendtoViz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmCompetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FrmCompetition.designer.cs">
+      <DependentUpon>FrmCompetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmCompetitionSquad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FrmCompetitionSquad.designer.cs">
+      <DependentUpon>FrmCompetitionSquad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmCompetitionTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FrmCompetitionTeam.designer.cs">
+      <DependentUpon>FrmCompetitionTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\FrmLineup_Kabaddi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmLineup_Kabaddi.designer.cs">
+      <DependentUpon>FrmLineup_Kabaddi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmMasterPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FrmMasterPlayer.designer.cs">
+      <DependentUpon>FrmMasterPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\FrmMatches_Kabaddi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmMatches_Kabaddi.designer.cs">
+      <DependentUpon>FrmMatches_Kabaddi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMDIparent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMDIparent.Designer.cs">
+      <DependentUpon>FrmMDIparent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOpenMatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOpenMatches.Designer.cs">
+      <DependentUpon>FrmOpenMatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabaddi\FrmKabaddiScoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabaddi\FrmKabaddiScoring.designer.cs">
+      <DependentUpon>FrmKabaddiScoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FrmTeam.designer.cs">
+      <DependentUpon>FrmTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmVenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FrmVenue.designer.cs">
+      <DependentUpon>FrmVenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layer\BusinessLy.cs" />
+    <Compile Include="Layer\DBConnection.cs" />
+    <Compile Include="Layer\MasterDL.cs" />
+    <Compile Include="mycommon.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wrestling\FrmLineup_Ww.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wrestling\FrmLineup_Ww.designer.cs">
+      <DependentUpon>FrmLineup_Ww.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wrestling\FrmMatches_Ww.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wrestling\FrmMatches_Ww.designer.cs">
+      <DependentUpon>FrmMatches_Ww.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Athletics\FrmLineup_Athletic.resx">
+      <DependentUpon>FrmLineup_Athletic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Athletics\FrmMatch_Athletic.resx">
+      <DependentUpon>FrmMatch_Athletic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Athletics\frmResult_Athletic.resx">
+      <DependentUpon>frmResult_Athletic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadMinton\FrmBadminton.resx">
+      <DependentUpon>FrmBadminton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadMinton\FrmLineup_BM.resx">
+      <DependentUpon>FrmLineup_BM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadMinton\FrmMatches.resx">
+      <DependentUpon>FrmMatches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadMinton\FrmMatches_BM.resx">
+      <DependentUpon>FrmMatches_BM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadMinton\FrmQC.resx">
+      <DependentUpon>FrmQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadMinton\FrmQClite.resx">
+      <DependentUpon>FrmQClite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasketBall\FrmBasketBall.resx">
+      <DependentUpon>FrmBasketBall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasketBall\FrmLineups_BB.resx">
+      <DependentUpon>FrmLineups_BB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasketBall\FrmMatches_BB.resx">
+      <DependentUpon>FrmMatches_BB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Athletics\FrmAthletics_Attempts.resx">
+      <DependentUpon>FrmAthletics_Attempts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDBBackup.resx">
+      <DependentUpon>FrmDBBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmtiebreaker.resx">
+      <DependentUpon>Frmtiebreaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmArchiveSync.resx">
+      <DependentUpon>frmArchiveSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmBroadcast.resx">
+      <DependentUpon>frmBroadcast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmfinalSync.resx">
+      <DependentUpon>FrmfinalSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmOtherCards.resx">
+      <DependentUpon>frmOtherCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmSubstitute.resx">
+      <DependentUpon>frmSubstitute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmDeleteMatchcs.resx">
+      <DependentUpon>frmDeleteMatchcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedalEntry.resx">
+      <DependentUpon>frmMedalEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedalReadfrmJson.resx">
+      <DependentUpon>frmMedalReadfrmJson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmAllReport.resx">
+      <DependentUpon>FrmAllReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmImportExport.resx">
+      <DependentUpon>frmImportExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmManoftheMatch.resx">
+      <DependentUpon>frmManoftheMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmManualScore.resx">
+      <DependentUpon>FrmManualScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmMatchResult.resx">
+      <DependentUpon>frmMatchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmPitchmapRegion.resx">
+      <DependentUpon>frmPitchmapRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmReview.resx">
+      <DependentUpon>frmReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmScorecard.resx">
+      <DependentUpon>frmScorecard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmSync.resx">
+      <DependentUpon>frmSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\frmTimeout.resx">
+      <DependentUpon>frmTimeout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmValidation.resx">
+      <DependentUpon>FrmValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\Manual_Capture.resx">
+      <DependentUpon>Manual_Capture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho Kho\FrmKhoKho.resx">
+      <DependentUpon>FrmKhoKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho Kho\FrmLineup_KK.resx">
+      <DependentUpon>FrmLineup_KK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho Kho\FrmMatches_KK.resx">
+      <DependentUpon>FrmMatches_KK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho Kho\Frmtoss.resx">
+      <DependentUpon>Frmtoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmCoachMaster.resx">
+      <DependentUpon>frmCoachMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Volley Ball\FrmLineup_VB.resx">
+      <DependentUpon>FrmLineup_VB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Volley Ball\FrmMatches_VB.resx">
+      <DependentUpon>FrmMatches_VB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Volley Ball\FrmMatches_Volleyball.resx">
+      <DependentUpon>FrmMatches_Volleyball.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Volley Ball\FrmVolleyBall.resx">
+      <DependentUpon>FrmVolleyBall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wrestling\FrmWrestling.resx">
+      <DependentUpon>FrmWrestling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmKabaddiQC.resx">
+      <DependentUpon>FrmKabaddiQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layer\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendtoViz.resx">
+      <DependentUpon>SendtoViz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FrmCompetition.resx">
+      <DependentUpon>FrmCompetition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FrmCompetitionSquad.resx">
+      <DependentUpon>FrmCompetitionSquad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FrmCompetitionTeam.resx">
+      <DependentUpon>FrmCompetitionTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmLineup_Kabaddi.resx">
+      <DependentUpon>FrmLineup_Kabaddi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FrmMasterPlayer.resx">
+      <DependentUpon>FrmMasterPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmMatches_Kabaddi.resx">
+      <DependentUpon>FrmMatches_Kabaddi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMDIparent.resx">
+      <DependentUpon>FrmMDIparent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOpenMatches.resx">
+      <DependentUpon>FrmOpenMatches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabaddi\FrmKabaddiScoring.resx">
+      <DependentUpon>FrmKabaddiScoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FrmTeam.resx">
+      <DependentUpon>FrmTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FrmVenue.resx">
+      <DependentUpon>FrmVenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wrestling\FrmLineup_Ww.resx">
+      <DependentUpon>FrmLineup_Ww.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wrestling\FrmMatches_Ww.resx">
+      <DependentUpon>FrmMatches_Ww.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\badminton %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basketball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kabaddi_Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volleyball.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Athletic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x86\Debug\Medal_logo.png" />
+    <None Include="bin\x86\Debug\WWEImg.jpg" />
+    <Content Include="Khelo-India logo.ico" />
+    <None Include="Resources\Basket_Ball.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
